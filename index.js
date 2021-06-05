@@ -56,12 +56,11 @@ async function desenharGrafico() {
         dataArray.push([vehicles.name, Number(vehicles.passengers)])
     });
 
-    var dat
-
     var data = google.visualization.arrayToDataTable(dataArray);
 
     var options = {
-        title: 'My Daily Activities'
+        title: 'Maiores veículos',
+        legend: 'none'
     };
 
     var chart = new google.visualization.PieChart(document.getElementById('piechart'));
