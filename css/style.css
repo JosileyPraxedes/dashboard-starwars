@@ -14,6 +14,15 @@ ul{
     list-style: none;
 }
 
+a{ 
+    text-decoration: none;
+    color: #fff;
+}
+
+a:hover{
+    color: #ffba33;
+}
+
 .container {
     display: flex;
 }

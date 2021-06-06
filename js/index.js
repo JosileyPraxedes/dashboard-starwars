@@ -1,6 +1,6 @@
 // document.getElementById('personagens').innerHTML = 11;
 
-const personagensContator = document.getElementById("personagens");
+const personagensContador = document.getElementById("personagens");
 const navesContator = document.getElementById("naves");
 const planetasContator = document.getElementById("planetas");
 const luasContator = document.getElementById("luas");
@@ -16,7 +16,7 @@ function personagensContatores() {
         swapiGet("vehicles/")
     ]).then(function(results) {
 
-        personagensContator.innerHTML = results[0].data.count;
+        personagensContador.innerHTML = results[0].data.count;
         navesContator.innerHTML = results[1].data.count;
         planetasContator.innerHTML = results[2].data.count;
         luasContator.innerHTML = results[3].data.count;
@@ -52,6 +52,7 @@ async function desenharGrafico() {
 
     const dataArray = [];
     dataArray.push(["Veículos", "Passageiros"]);
+    console.log(dataArray);
     vehiclesArray.forEach(vehicles =>{
         dataArray.push([vehicles.name, Number(vehicles.passengers)])
     });
